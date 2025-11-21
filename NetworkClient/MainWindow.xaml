@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NetworkClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="571">
+        Title="MainWindow" Height="450" Width="571" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <Button x:Name="btnConnectDisconnect"
                 Content="Connect" 
@@ -16,21 +16,21 @@
                 Width="146" Click="Button_Click"/>
         <TextBox x:Name="tbUserName"
             HorizontalAlignment="Left" 
-                 Margin="176,12,0,0" 
+                 Margin="176,12,10,0" 
                  TextWrapping="Wrap" 
                  Text="Имя клиента" 
                  VerticalAlignment="Top" 
                  Width="384"/>
         <ListBox x:Name="lbChat" 
-                 Margin="10,35,11,106"/>
+                 Margin="10,35,10,106"/>
         <TextBox x:Name="tbMessage"
             HorizontalAlignment="Center" 
-            Margin="0,333,0,0" 
+            Margin="10,330,10,10" 
             TextWrapping="Wrap" 
             Text="" 
             VerticalAlignment="Top" 
             Width="550" 
-            Height="91"/>
+            Height="67" KeyDown="tbMessage_KeyDown"/>
 
     </Grid>
 </Window>
